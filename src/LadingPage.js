@@ -1,9 +1,11 @@
+import React from 'react';
+import Header from './components/Header';
 
 function LadingPage() {
   return (
-    <div>
-      <h1>Projeto Audiovisual</h1>
-    </div>
+    <>
+      <Header />
+    </>
   );
 }
 
