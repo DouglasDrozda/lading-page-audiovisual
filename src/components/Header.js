@@ -1,15 +1,27 @@
+import React, { useEffect } from 'react';
 import { Container, Nav, Navbar } from 'react-bootstrap';
+import Active_Scroll from '../functions/main';
 
 import '../styles/Header.css';
 
 function Header() {
+  useEffect(() => {
+    Active_Scroll()
+  }, []);
+
   return (
     <header>
-      <Navbar variant="light" expand="lg">
+      <video loop muted autoPlay>
+        <source src="https://www.w3schools.com/howto/rain.mp4" type="video/mp4" />
+        <source src="media/Cover - A Thousand Years.ogg" type="video/ogg" />
+        <source src="media/Cover - A Thousand Years.webm" type="video/webm" />
+        Formato de vídeo não suportado
+      </video>
+      <Navbar variant="light" expand="lg"  className="nav-bar">
         <Container>
           <div className="header-title">
             <Navbar.Brand href="#home">
-              <img src="" alt="Felipe Neves" width="250px" />
+              <h2>LOGO</h2>
             </Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
           </div>
