@@ -11,7 +11,7 @@
   width: 90%;
   justify-content: center;
   flex-direction: column;
-  margin-top: 50px;
+  margin: 50px;
 }
 
 .about-title {
@@ -36,4 +36,10 @@
   line-height: 1.8;
   text-align: justify;
   font-size: 18px;
+}
+
+@media ( max-width: 991px) {
+  .about-text {
+    width: 100%;
+  }
 }
