@@ -1,0 +1,39 @@
+.about-container {
+  background-color: #CECECE;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.about-sub-container {
+  align-items: center;
+  display: flex;
+  width: 90%;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 50px;
+}
+
+.about-title {
+  display: flex;
+  justify-content: center;
+  font-weight: 700;
+}
+
+.about-title h1 {
+  font-weight: 700;
+  font-size: 42px;
+}
+
+.about-text {
+  width: 70%;
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.about-text p {
+  line-height: 1.8;
+  text-align: justify;
+  font-size: 18px;
+}
