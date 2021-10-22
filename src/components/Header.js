@@ -10,7 +10,7 @@ function Header() {
   }, []);
 
   return (
-    <header>
+    <header id="home">
       <video loop muted autoPlay>
         <source src="https://www.w3schools.com/howto/rain.mp4" type="video/mp4" />
         <source src="media/Cover - A Thousand Years.ogg" type="video/ogg" />

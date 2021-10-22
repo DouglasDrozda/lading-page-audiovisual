@@ -4,7 +4,7 @@ import '../styles/About.css';
 
 function About() {
   return (
-    <section className="about-container">
+    <section className="about-container" id="sobre">
       <div className="about-sub-container">
         <div className="about-title">
           <h1>SOBRE</h1>
