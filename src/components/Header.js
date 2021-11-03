@@ -11,7 +11,7 @@ function Header() {
 
   return (
     <header id="home">
-      <video loop muted autoPlay>
+      <video loop muted autoPlay className="video-header">
         <source src="https://www.w3schools.com/howto/rain.mp4" type="video/mp4" />
         <source src="media/Cover - A Thousand Years.ogg" type="video/ogg" />
         <source src="media/Cover - A Thousand Years.webm" type="video/webm" />

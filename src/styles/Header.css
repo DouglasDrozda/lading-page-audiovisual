@@ -10,10 +10,9 @@ header {
   overflow: hidden;
 }
 
-video {
+.video-header {
   position: fixed;
   z-index: -1;
-  width: 100vh;
   min-width: 100%;
   height: auto;
 }
