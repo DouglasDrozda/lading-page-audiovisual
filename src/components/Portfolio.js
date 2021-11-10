@@ -32,8 +32,8 @@ function Portfolio() {
                   src={urlVideo}
                   title="video"
                   allow="autoplay; fullscreen; picture-in-picture"
-                  allowfullscreen
-                  frameborder="0"
+                  allowFullScreen
+                  frameBorder="0"
                   className='play-on'
                 />
               </Modal.Header>
@@ -43,9 +43,7 @@ function Portfolio() {
                 Object.values(data).map((video) => {
                   return (
                     <div className="description-video" key={video.id} onClick={() => handleClick(video.url)}>
-                      <div poster={video.poster} className="video_play">
-                        <img src={video.url} alt={video.name} />
-                      </div>
+                      <video poster={video.poster} className="video_play" />
                       <div className="on_play">
                         <img src={play} alt="play" />
                       </div>

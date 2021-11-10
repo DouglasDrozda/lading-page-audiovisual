@@ -61,8 +61,8 @@
   display: flex;
   align-items: center;
   position: absolute;
-  width: 350px;
-  height: 200px;
+/*   width: 350px;
+  height: 200px; */
 }
 
 .on_play:hover {
@@ -120,4 +120,23 @@ iframe {
 .modal.show .modal-dialog {
   transform: scale(1.1);
   transition: 1s;
+}
+
+@media only screen and (max-width: 600px) {
+  .video_play {
+    width: 240px;
+    height: 150px;
+  }
+
+}
+
+@media only screen and (max-width: 300px) {
+  header {
+    min-height: 75vh;
+  }
+
+  .description-video {
+    margin: 0;
+  }
+
 }
