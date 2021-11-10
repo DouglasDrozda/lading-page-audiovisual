@@ -4,6 +4,7 @@ import About from './components/About';
 import Header from './components/Header';
 import Services from './components/Services';
 import Portfolio from './components/Portfolio';
+import Contact from './components/Contact';
 
 function LadingPage() {
   return (
@@ -13,6 +14,7 @@ function LadingPage() {
         <About />
         <Services />
         <Portfolio />
+        <Contact />
       </main>
     </>
   );

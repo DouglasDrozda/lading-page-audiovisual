@@ -21,13 +21,13 @@ function Portfolio() {
           <h1>PORTFÓLIO</h1>
         </div>
         <div className="video-maker">
-          <div className="row1" onClick={handleShow}>
+          <div className="row1">
             <Modal
               show={show}
               backdrop="static"
               keyboard={false}
             >
-              <Modal.Header closeButton>
+              <Modal.Header closeButton onClick={ handleShow }>
                 <iframe
                   src={urlVideo}
                   title="video"
@@ -42,9 +42,13 @@ function Portfolio() {
               {
                 Object.values(data).map((video) => {
                   return (
-                    <div className="description-video" key={video.id} onClick={() => handleClick(video.url)}>
+                    <div className="description-video" key={video.id}>
                       <video poster={video.poster} className="video_play" />
-                      <div className="on_play">
+                      <div className="on_play" onClick={
+                        () => {
+                          handleClick(video.url);
+                          handleShow();
+                        }}>
                         <img src={play} alt="play" />
                       </div>
                     </div>
