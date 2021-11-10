@@ -1,0 +1,45 @@
+.section-contact {
+  display: flex;
+  align-items: center;
+  background: #242021;
+  justify-content: center;
+  width: 100%;
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.container-contact {
+  border: 1px solid red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 86%;
+}
+
+.container-contact h2 {
+  color: #FFFFFF;
+}
+
+.information {
+  border: 1px solid red;
+  display: flex;
+  justify-content: center;
+}
+
+.con-1 {
+  border: 1px solid red;
+}
+
+.con-2 {
+  border: 1px solid red;
+}
+
+hr {
+  color: white;
+}
+
+p, h2, h5 {
+  color: white;
+}

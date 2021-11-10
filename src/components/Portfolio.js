@@ -1,17 +1,17 @@
 import React, { useState } from 'react';
-
 import '../styles/Portfolio.css';
-
+import { Modal } from 'react-bootstrap';
 import data from '../services/data';
 import play from '../icons/play.png';
 
 function Portfolio() {
-  const [classPlay, setClassPlay] = useState('play-off');
   const [urlVideo, setUrlVideo] = useState('');
-  
+  const [show, setShow] = useState(false);
+
+  const handleShow = () => setShow(!show);
+
   const handleClick = (url) => {
     setUrlVideo(url);
-    setClassPlay('play-on');
   }
 
   return (
@@ -22,28 +22,40 @@ function Portfolio() {
         </div>
         <div className="video-maker">
           <div className="row1">
-            {
-              Object.values(data).map((video) => {
-                return (
-                  <div className="description-video" key={ video.id } onClick={ () => handleClick(video.url) }>
-                    <video poster={ video.poster } className="video_play">
-                      <source src={ video.url } type="video/mp4" />
-                    </video>
-                    <div className="on_play">
-                      <img src={ play } alt="play" />
+            <Modal
+              show={show}
+              backdrop="static"
+              keyboard={false}
+            >
+              <Modal.Header closeButton onClick={ handleShow }>
+                <iframe
+                  src={urlVideo}
+                  title="video"
+                  allow="autoplay; fullscreen; picture-in-picture"
+                  allowFullScreen
+                  frameBorder="0"
+                  className='play-on'
+                />
+              </Modal.Header>
+            </Modal>
+            <div className="description-video-container">
+              {
+                Object.values(data).map((video) => {
+                  return (
+                    <div className="description-video" key={video.id}>
+                      <video poster={video.poster} className="video_play" />
+                      <div className="on_play" onClick={
+                        () => {
+                          handleClick(video.url);
+                          handleShow();
+                        }}>
+                        <img src={play} alt="play" />
+                      </div>
                     </div>
-                  </div>
-                )
-              })
-            }
-            <iframe
-              src={ urlVideo }
-              title="video"
-              allow="autoplay; fullscreen; picture-in-picture"
-              allowfullscreen
-              frameborder="0"
-              className={ classPlay }
-            />
+                  )
+                })
+              }
+            </div>
           </div>
         </div>
       </div>
@@ -52,3 +64,4 @@ function Portfolio() {
 }
 
 export default Portfolio;
+
